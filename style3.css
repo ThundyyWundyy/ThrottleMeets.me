@@ -1,0 +1,721 @@
+:root {
+    --blue : #12d2db;
+    --white : #fcf2fa;
+    --purple : #912a7eaa;
+    --purple-blc : #230622dd;
+    --shadow : 0 5px 10px 5px rgba(0, 0, 0, .3);
+    --navColor : linear-gradient(to right, rgba(178, 47, 147, .6)5%, rgba(35, 6, 34, .9));
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    position: absolute;
+    background: var(--navColor);
+    box-shadow: var(--shadow);
+    height: 80px;
+    width: 100%;
+}
+
+label.logo{
+    color: var(--white);
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 80px;
+    letter-spacing: -1px;
+    font-weight: 800;
+    font-style: italic;
+    transition: .2s ease;
+    text-shadow: 3px 5px 20px #230622aa;
+}
+
+nav ul{
+    float: right;
+    margin-right: 80px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+}
+
+nav ul li a{
+    color: var(--white);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 13px;
+    text-transform: lowercase;
+}
+
+a:active a:hover{
+    background: var(--purple);
+    transition: .5s;
+}
+
+.checkbtn{
+    line-height: 80px;
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    display: none;
+    margin-right: 40px;
+}
+
+.checkbtn i {
+    color: var(--white);
+    padding: 5px;
+    border-radius: 10px;
+    transition: .5s ease;
+}
+
+.checkbtn i:hover {
+    background: var(--purple);
+}
+
+#check {
+    display: none;
+}
+
+section{
+    height: 100vh;
+    background: url(../img/Abstract-03.jpg);
+    background-position: top;
+    background-size: cover;
+}
+
+/* responsive code */
+@media (max-width: 952px) {
+    /* table mode */
+    label.logo {
+      font-size: 25px;
+      padding-left: 50px;
+    }
+    nav ul li a {
+      font-size: 14px;
+    }
+
+    .container{
+        display: none;
+    }
+}
+  
+  @media (max-width: 858px) {
+    /* mobile mode */
+    .checkbtn {
+      display: block;
+    }
+     ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: var(--purple-blc);
+      top: 80px;
+      left: -100%;
+      padding-top: 80px;
+      text-align: center;
+      transition: .5s ease;
+    }
+    nav ul li {
+      display: block;
+      margin: 30px 0;
+      line-height: 30px;
+    }
+    nav ul li a {
+      font-size: 20px;
+    }
+    a.active, a:hover {
+      background: none;
+      color: var(--blue);
+      text-shadow: 0 10px 15px var(--blue);
+    }
+    #check:checked ~ ul {
+      left: 0;
+    }
+
+    .container{
+        display: none;
+    }
+
+    .card2{
+        display: none;
+    }
+
+}
+
+/* End of background code, start of card code*/
+
+/*
+.card {
+    width: 190px;
+    height: 274px;
+    background: white;
+    padding: .4em;
+    border-radius: 6px;
+    margin: 100px;
+}*/
+
+.card{
+    width: 190px;
+    height: 274px;
+    background: white;
+    padding: .4em;
+    border-radius: 6px;
+    position: absolute;
+    top: 9em;
+    left: 7em;
+}
+  
+.card-image {
+    background-color: rgb(236, 236, 236);
+    background: url(../img/car-meet-photo-1.jpg);
+    width: 100%;
+    height: 60%;
+    border-radius: 6px 6px 0 0;
+}
+  
+.card-image:hover {
+    transform: scale(0.98);
+}
+  
+.category {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 600;
+    color: rgb(63, 121, 230);
+    padding: 10px 7px 0;
+}
+  
+.category:hover {
+    cursor: pointer;
+}
+  
+.heading {
+    font-weight: 600;
+    color: rgb(88, 87, 87);
+    padding: 7px;
+}
+  
+.heading:hover {
+    cursor: pointer;
+}
+  
+.author {
+    color: gray;
+    font-weight: 400;
+    font-size: 11px;
+    padding-top: 20px;
+}
+  
+.name {
+    font-weight: 600;
+}
+  
+.name:hover {
+    cursor: pointer;
+}
+ 
+/*Card1*/
+
+.card1{
+    width: 190px;
+    height: 274px;
+    background: white;
+    padding: .4em;
+    border-radius: 6px;
+    position: absolute;
+    top: 28em;
+    left: 7em;
+}
+  
+.card-image1 {
+    background-color: rgb(236, 236, 236);
+    background: url(../img/cover-image4.jpg);
+    width: 100%;
+    height: 60%;
+    border-radius: 6px 6px 0 0;
+}
+  
+.card-image1:hover {
+    transform: scale(0.98);
+}
+  
+.category1 {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 600;
+    color: rgb(63, 121, 230);
+    padding: 10px 7px 0;
+}
+  
+.category1:hover {
+    cursor: pointer;
+}
+  
+.heading1 {
+    font-weight: 600;
+    color: rgb(88, 87, 87);
+    padding: 7px;
+}
+  
+.heading1:hover {
+    cursor: pointer;
+}
+  
+.author1 {
+    color: gray;
+    font-weight: 400;
+    font-size: 11px;
+    padding-top: 20px;
+}
+  
+.name1 {
+    font-weight: 600;
+}
+  
+.name1:hover {
+    cursor: pointer;
+}
+
+.card2{
+    width: 190px;
+    height: 274px;
+    background: white;
+    padding: .4em;
+    border-radius: 6px;
+    position: absolute;
+    top: 28em;
+    left: 23em;
+}
+  
+.card-image2 {
+    background-color: rgb(236, 236, 236);
+    background: url(../img/cover-image4.jpg);
+    width: 100%;
+    height: 60%;
+    border-radius: 6px 6px 0 0;
+}
+  
+.card-image2:hover {
+    transform: scale(0.98);
+}
+  
+.category2 {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 600;
+    color: rgb(63, 121, 230);
+    padding: 10px 7px 0;
+}
+  
+.category2:hover {
+    cursor: pointer;
+}
+  
+.heading2 {
+    font-weight: 600;
+    color: rgb(88, 87, 87);
+    padding: 7px;
+}
+  
+.heading2:hover {
+    cursor: pointer;
+}
+  
+.author2 {
+    color: gray;
+    font-weight: 400;
+    font-size: 11px;
+    padding-top: 20px;
+}
+  
+.name2 {
+    font-weight: 600;
+}
+  
+.name2:hover {
+    cursor: pointer;
+}
+
+/*end of instagram cars*/
+
+.quote-card{
+    position: absolute;
+    width: 190px;
+    height: 274px;
+    top: 9em;
+    left: 23em;
+    border-radius: .6em;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: 85px;
+    letter-spacing: -1px;
+    font-weight: 800;
+    font-style: italic;
+    transition: .2s ease;
+    text-shadow: 3px 5px 20px #230622aa;
+    background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
+}
+
+
+
+.container {
+    position: absolute;
+    top: 11em;
+    right: 8em;
+    width: 800px;
+    height: 500px;
+    transition: 200ms;
+}
+  
+.container:active {
+    width: 180px;
+    height: 245px;
+}
+  
+#card {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: 700ms;
+    background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
+}
+  
+.subtitle {
+    transform: translateY(160px);
+    color: rgb(134, 110, 221);
+    text-align: center;
+    width: 100%;
+}
+  
+.title {
+    opacity: 0;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out-out;
+    transition-delay: 100ms;
+    position: absolute;
+    font-size: x-large;
+    font-weight: bold;
+}
+  
+.tracker:hover ~ #card .title {
+    opacity: 1;
+}
+  
+#prompt {
+    bottom: 8px;
+    left: 12px;
+    z-index: 20;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 300ms ease-in-out-out;
+    position: absolute;
+    max-width: 110px;
+    color: rgb(255, 255, 255);
+}
+  
+.tracker {
+    position: absolute;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+}
+  
+.tracker:hover {
+    cursor: pointer;
+}
+  
+.tracker:hover ~ #card #prompt {
+    opacity: 0;
+}
+  
+.tracker:hover ~ #card {
+    transition: 300ms;
+    filter: brightness(1.1);
+}
+  
+.container:hover #card::before {
+    transition: 200ms;
+    content: '';
+    opacity: 80%;
+}
+  
+.canvas {
+    perspective: 800px;
+    inset: 0;
+    z-index: 200;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "tr-1 tr-2 tr-3 tr-4 tr-5"
+      "tr-6 tr-7 tr-8 tr-9 tr-10"
+      "tr-11 tr-12 tr-13 tr-14 tr-15"
+      "tr-16 tr-17 tr-18 tr-19 tr-20"
+      "tr-21 tr-22 tr-23 tr-24 tr-25";
+}
+
+#card::before {
+    content: '';
+    background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
+    filter: blur(2rem);
+    opacity: 30%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    transition: 200ms;
+}
+  
+.tr-1 {
+    grid-area: tr-1;
+}
+  
+.tr-2 {
+    grid-area: tr-2;
+}
+  
+.tr-3 {
+    grid-area: tr-3;
+}
+  
+.tr-4 {
+    grid-area: tr-4;
+}
+  
+.tr-5 {
+    grid-area: tr-5;
+}
+  
+.tr-6 {
+    grid-area: tr-6;
+}
+  
+.tr-7 {
+    grid-area: tr-7;
+}
+  
+.tr-8 {
+    grid-area: tr-8;
+}
+  
+.tr-9 {
+    grid-area: tr-9;
+}
+  
+.tr-10 {
+    grid-area: tr-10;
+}
+  
+.tr-11 {
+    grid-area: tr-11;
+}
+  
+.tr-12 {
+    grid-area: tr-12;
+}
+  
+.tr-13 {
+    grid-area: tr-13;
+}
+  
+.tr-14 {
+    grid-area: tr-14;
+}
+  
+.tr-15 {
+    grid-area: tr-15;
+}
+  
+  .tr-16 {
+    grid-area: tr-16;
+}
+  
+.tr-17 {
+    grid-area: tr-17;
+}
+  
+.tr-18 {
+    grid-area: tr-18;
+}
+  
+.tr-19 {
+    grid-area: tr-19;
+}
+  
+.tr-20 {
+    grid-area: tr-20;
+}
+  
+.tr-21 {
+    grid-area: tr-21;
+}
+  
+.tr-22 {
+    grid-area: tr-22;
+}
+  
+.tr-23 {
+    grid-area: tr-23;
+}
+  
+.tr-24 {
+    grid-area: tr-24;
+}
+  
+.tr-25 {
+    grid-area: tr-25;
+}
+  
+.tr-1:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(20deg) rotateY(-10deg) rotateZ(0deg);
+}
+  
+.tr-2:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(20deg) rotateY(-5deg) rotateZ(0deg);
+}
+  
+.tr-3:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(20deg) rotateY(0deg) rotateZ(0deg);
+}
+  
+.tr-4:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(20deg) rotateY(5deg) rotateZ(0deg);
+}
+  
+.tr-5:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(20deg) rotateY(10deg) rotateZ(0deg);
+}
+  
+.tr-6:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(10deg) rotateY(-10deg) rotateZ(0deg);
+}
+  
+.tr-7:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(10deg) rotateY(-5deg) rotateZ(0deg);
+}
+  
+.tr-8:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(10deg) rotateY(0deg) rotateZ(0deg);
+}
+  
+.tr-9:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(10deg) rotateY(5deg) rotateZ(0deg);
+}
+  
+.tr-10:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(10deg) rotateY(10deg) rotateZ(0deg);
+}
+  
+.tr-11:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(0deg) rotateY(-10deg) rotateZ(0deg);
+}
+  
+.tr-12:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(0deg) rotateY(-5deg) rotateZ(0deg);
+}
+  
+.tr-13:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+  
+.tr-14:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(0deg) rotateY(5deg) rotateZ(0deg);
+}
+  
+.tr-15:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(0deg) rotateY(10deg) rotateZ(0deg);
+}
+  
+.tr-16:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(-10deg) rotateY(-10deg) rotateZ(0deg);
+}
+  
+.tr-17:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(-10deg) rotateY(-5deg) rotateZ(0deg);
+}
+  
+.tr-18:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg);
+}
+  
+.tr-19:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(-10deg) rotateY(5deg) rotateZ(0deg);
+}
+  
+.tr-20:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(-10deg) rotateY(10deg) rotateZ(0deg);
+}
+  
+.tr-21:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(-20deg) rotateY(-10deg) rotateZ(0deg);
+}
+  
+.tr-22:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(-20deg) rotateY(-5deg) rotateZ(0deg);
+}
+  
+.tr-23:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
+}
+  
+.tr-24:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(-20deg) rotateY(5deg) rotateZ(0deg);
+}
+  
+.tr-25:hover ~ #card {
+    transition: 125ms ease-in-out;
+    transform: rotateX(-20deg) rotateY(10deg) rotateZ(0deg);
+}
+  
+.noselect {
+    -webkit-touch-callout: none;
+     /* iOS Safari */
+    -webkit-user-select: none;
+     /* Safari */
+     /* Konqueror HTML */
+    -moz-user-select: none;
+     /* Old versions of Firefox */
+    -ms-user-select: none;
+     /* Internet Explorer/Edge */
+    user-select: none;
+     /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
