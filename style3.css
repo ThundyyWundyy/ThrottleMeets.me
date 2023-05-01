@@ -87,7 +87,7 @@ a:active a:hover{
 
 section{
     height: 100vh;
-    background: url(../img/Abstract-03.jpg);
+    background: url(Abstract-03.jpg);
     background-position: top;
     background-size: cover;
 }
@@ -170,7 +170,7 @@ section{
   
 .card-image {
     background-color: rgb(236, 236, 236);
-    background: url(../img/lamboghini.jpg) center;
+    background: url(lamboghini.jpg) center;
     align-items: center;
     overflow: hidden;
     width: 100%;
@@ -234,7 +234,7 @@ section{
   
 .card-image1 {
     background-color: rgb(236, 236, 236);
-    background: url(../img/dropped-audi.png) center;
+    background: url(dropped-audi.png) center;
     width: 100%;
     height: 60%;
     border-radius: 6px 6px 0 0;
@@ -294,7 +294,7 @@ section{
   
 .card-image2 {
     background-color: rgb(236, 236, 236);
-    background: url(../img/lamboghini-orange.png) center;
+    background: url(lamboghini-orange.png) center;
     width: 100%;
     height: 60%;
     border-radius: 6px 6px 0 0;
