@@ -323,7 +323,6 @@ a:active a:hover{
 .title {
     opacity: 0;
     transition-duration: 300ms;
-    transition-timing-function: ease-in-out-out;
     transition-delay: 100ms;
     position: absolute;
     padding: 40px;
