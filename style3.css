@@ -12,10 +12,13 @@
     margin: 0;
     text-decoration: none;
     box-sizing: border-box;
+    outline: white dotted 2px;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
+    background: url(Abstract-03.jpg);
+    background-size: cover;
 }
 
 nav{
@@ -85,78 +88,6 @@ a:active a:hover{
     display: none;
 }
 
-section{
-    height: 100vh;
-    background: url(Abstract-03.jpg);
-    background-position: top;
-    background-size: cover;
-}
-
-/* responsive code */
-@media (max-width: 952px) {
-    /* table mode */
-    label.logo {
-      font-size: 25px;
-      padding-left: 50px;
-    }
-    nav ul li a {
-      font-size: 14px;
-    }
-
-    .container{
-        display: none;
-    }
-
-}
-  
-  @media (max-width: 858px) {
-    /* mobile mode */
-    .checkbtn {
-      display: block;
-    }
-     ul {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background: var(--purple-blc);
-      top: 80px;
-      left: -100%;
-      padding-top: 80px;
-      text-align: center;
-      transition: .5s ease;
-    }
-    nav ul li {
-      display: block;
-      margin: 30px 0;
-      line-height: 30px;
-    }
-    nav ul li a {
-      font-size: 20px;
-    }
-    a.active, a:hover {
-      background: none;
-      color: var(--blue);
-      text-shadow: 0 10px 15px var(--blue);
-    }
-    #check:checked ~ ul {
-      left: 0;
-    }
-
-    .container{
-        display: none;
-    }
-
-    .card2{
-        display: none;
-    }
-
-    .card{
-        display: none;
-    }
-}
-
-/* End of background code, start of card code*/
-
 .card{
     width: 190px;
     height: 274px;
@@ -211,11 +142,11 @@ section{
     padding-top: 20px;
 }
   
-.name {
+.handle {
     font-weight: 600;
 }
   
-.name:hover {
+.handle:hover {
     cursor: pointer;
 }
  
@@ -273,11 +204,11 @@ section{
     padding-top: 20px;
 }
   
-.name1 {
+.handle1 {
     font-weight: 600;
 }
   
-.name1:hover {
+.handle1:hover {
     cursor: pointer;
 }
 
@@ -333,11 +264,11 @@ section{
     padding-top: 20px;
 }
   
-.name2 {
+.handle2 {
     font-weight: 600;
 }
   
-.name2:hover {
+.handle2:hover {
     cursor: pointer;
 }
 
@@ -475,6 +406,8 @@ section{
     transition: 200ms;
 }
   
+/*Declaring grid area*/
+
 .tr-1 {
     grid-area: tr-1;
 }
@@ -575,6 +508,8 @@ section{
     grid-area: tr-25;
 }
   
+/*Rotating the card when certain grids are hovered over*/
+
 .tr-1:hover ~ #card {
     transition: 125ms ease-in-out;
     transform: rotateX(20deg) rotateY(-10deg) rotateZ(0deg);
@@ -699,149 +634,291 @@ section{
     transition: 125ms ease-in-out;
     transform: rotateX(-20deg) rotateY(10deg) rotateZ(0deg);
 }
-  
-.noselect {
-    -webkit-touch-callout: none;
-     /* iOS Safari */
-    -webkit-user-select: none;
-     /* Safari */
-     /* Konqueror HTML */
-    -moz-user-select: none;
-     /* Old versions of Firefox */
-    -ms-user-select: none;
-     /* Internet Explorer/Edge */
-    user-select: none;
-     /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-}
 
-.modal{
-    width: fit-content;
-    height: fit-content;
-    background: #fff;
-    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 26px;
-    max-width: 450px;
-}
+/* Ticket page */
 
-.form{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-.payment-options{
-    width: calc(100% - 40px);
-    display: grid;
-    grid-template-columns: 33% 34% 33%;
-    gap: 20px;
-    padding: 10px;
+.payarea{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.payment-options button{
-    height: 55px;
-    background: #f2f2f2;
-    border-radius: 11px;
-    padding: 0;
-    border: 0;
-    outline: none;
+.content h1{
+  font-family: 'Playfair Display', serif;
 }
-
-.separator{
-    width: calc(100% - 20px);
-    display: none;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 10px;
-    color: #8B8E98;
-    margin: 0 10px;
-}
-
-.separator > p{
-    word-break: keep-all;
-    display: block;
-    text-align: center;
-    font-weight: 600;
-    font-size: 11px;
-    margin: auto;
-}
-
-.separator .line{
-    display: inline-block;
-    width: 100%;
-    height: 1px;
-    border: 0;
-    background-color: #e8e8e8;
-    margin: auto;
-}
-
-.credit-card-info{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.input-container {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.split {
-    display: grid;
-    grid-template-columns: 4fr 2fr;
-    gap: 15px;
-}
-
-.split input{
-    width: 100%;
-}
-
-.input-label{
-    font-size: 10px;
-    color: #8b8e98;
-    font-weight: 600;
-}
-
-.input-field{
-    width: auto;
-    height: 40px;
-    padding: 0 0 0 16px;
-    border-radius: 9px;
-    outline: none;
-    background-color: #F2F2F2;
-    border: 1px solid #e5e5e500;
-    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
-}
-
-.input-field:focus {
-    border: 1px solid transparent;
-    box-shadow: 0px 0px 0px 2px #242424;
-    background-color: transparent;
-}
-
-.purchase-btn {
-    height: 55px;
-    background: #F2F2F2;
-    border-radius: 11px;
-    border: 0;
-    outline: none;
-    color: #ffffff;
-    font-size: 13px;
-    font-weight: 700;
-    background: linear-gradient(180deg, #363636 0%, #1B1B1B 50%, #000000 100%);
-    box-shadow: 0px 0px 0px 0px #FFFFFF, 0px 0px 0px 0px #000000;
-    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
-}
+.main{
+  background-color: white;
+  border: 2px solid #6200EA;
  
-.purchase-btn:hover {
-    box-shadow: 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 4px #0000003a;
+  width: 500px;
+  height: 400px;
+  box-shadow: 0px 8px 60px -10px white;
+  border-radius: 10px;
+  padding:70px;
+  padding-top:10px;
 }
 
-/* Reset input number styles */
-.input-field::-webkit-outer-spin-button,
-.input-field::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+.internals{
+  padding-top:10px;
+  padding-left:120px;
+  font-family: 'Montserrat Medium';
+}
+
+/*input*/
+
+input[type=name] {
+  background-color: white;
+  background-image: url('https://image.flaticon.com/icons/svg/2089/2089773.svg');
+  background-position:5px 5px;
+  background-size:9%;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+input[type=text] {
+
+  background-color: white;
+  background-image: url('https://image.flaticon.com/icons/svg/633/633611.svg');
+  background-position:5px 5px;
+  background-size:9%;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+input[type=month] {
+  width :66%;
+  background-color: white;
+  background-image: url('https://image.flaticon.com/icons/svg/2693/2693507.svg');
+  background-position:6px 5px;
+  background-size:14%;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  padding-bottom:13px;
+  font-family: 'Montserrat Medium';
+}
+input[type=user] {
+  width :32.5%;
+  background-color: white;
+  background-image: url('https://cdn1.iconfinder.com/data/icons/glyph-card-payment/32/credit_card_CVV_CVC_code_number-512.png');
+  background-position:5px 5px;
+  background-size:31%;
+  background-repeat: no-repeat;
+  padding-left: 42px;
+}
+
+input{
+  width:100%;
+  padding: 15px 10px;
+  margin: 3px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #96a4e7;
+}
+.amount{
+  float:right;
+  right:0;
+}
+button{
+  width:100%;
+  padding: 10px 20px;
+  margin: 3px 0;
+  background-color: #96a4e7; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor:pointer;
+}
+/*credit card*/
+
+.credit-card{
+  background-image: linear-gradient(to bottom, #96a4e7, #a7a6ee, #baa7f3, #cda8f7, #e1a9f9);
+  position:fixed;
+  right:70%;
+  top:25%;
+  float:left;
+  
+  width:300px;
+  height:200px;
+  box-shadow: 8px 10px 0px 1px #cedbff ;
+  border-radius: 10px;
+  font-family: 'Montserrat Thin';
+  border: 2px solid #6200EA;
+}
+
+.visa{
+  padding-left:220px;
+  font-style: italic;
+  text-shadow: #eac1ff 3px 0 1px;
+  color:white;
+  /*visa font*/
+  font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.num{
+  color:white;
+  text-align:center;
+  padding-top:30px;
+  line-height:0;
+}
+.credit-card h4{
+  color:white;
+  float:left;
+  width:33%;
+  text-align:center;
+  margin-top: 70px;
+}
+
+
+/* responsive code */
+@media (max-width: 952px) {
+    /* table mode */
+    label.logo {
+      font-size: 25px;
+      padding-left: 50px;
+    }
+    nav ul li a {
+      font-size: 14px;
+    }
+
+    .container{
+        display: none;
+    }
+
+}
+  
+  @media (max-width: 858px) {
+    /* mobile mode */
+    .checkbtn {
+      display: block;
+    }
+     ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: var(--purple-blc);
+      top: 80px;
+      left: -100%;
+      padding-top: 80px;
+      text-align: center;
+      transition: .5s ease;
+    }
+    nav ul li {
+      display: block;
+      margin: 30px 0;
+      line-height: 30px;
+    }
+    nav ul li a {
+      font-size: 20px;
+    }
+    a.active, a:hover {
+      background: none;
+      color: var(--blue);
+      text-shadow: 0 10px 15px var(--blue);
+    }
+    #check:checked ~ ul {
+      left: 0;
+    }
+
+    .container{
+        display: none;
+    }
+
+    .card{
+        display: none;
+    }
+
+    .card2{
+        display: none;
+    }
+}
+
+/* About Page */
+
+.about-page{
+    height: 20em;
+    width: 16em;
+    background-color:rgba(178, 47, 147, .6);
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 3em;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: -1px;
+    text-shadow: 3px 5px 20px #230622aa;
+}
+
+
+
+.slider{
+    width: 650px;
+    height: 510px;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+
+.slider img{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+  
+.slider img:first-child{
+    z-index: 1;
+}
+  
+.slider img:nth-child(2){
+    z-index: 0;
+}
+
+.navigation-button{
+    position: absolute;
+    top: 88%;
+    left: 50%;
+}
+  
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Community page */
+
+.grid-gallery{
+    margin: 10px 50px;
+    position: absolute;
+    top: 5em;
+    left: 6em;
+}
+
+.grid-gallery img{
+    transition: 1s;
+    padding: 15px;
+    width: 400px;
+}
+
+.grid-gallery img:hover{
+    filter: grayscale();
+    transform: scale(1.1);
 }
