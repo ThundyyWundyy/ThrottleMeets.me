@@ -8,6 +8,39 @@
         <title> Buy tickets now! </title>
     </head>
     <body>
+      <div class="payarea">
+        <div class="credit-card">  
+          <h2 class="visa">VISA</h2>
+          <h3 class="num">n° 4539  7111  0342  0778</h3>
+      
+            <h4>name</br>Foulen</h4>
+            <h4>EXP</br>10/21</h4>
+            <h4>CVC</br>014</h4>
+      
+        </div>
+        <div class="main">
+          <div class="internals">
+            <h1>Payment Details</h1>
+            <form>
+              
+           <!--   <label>Name</label>-->
+              <input id="name" type="name" value="Foulen">
+              
+             <!-- <label>Card Number</label>-->
+              <input type="text" value="4539 7111 0342 0778">
+              
+            <!--  <label>Expiration Date</label>-->
+              <input type="month" value="2021-10">
+              <input type="user" value="014">
+              
+            </form>
+            <div class="payment">
+              <h4>Payment Amount :<div class ="amount"> £10 x 1 ticket </div></h4> 
+              <button>Pay</button>
+              </div>
+          </div>
+        </div>
+      </div>
 
         <nav>
             <input type="checkbox" id="check">
@@ -21,45 +54,6 @@
               <li><a href="tickets.html" class="active">tickets</a></li>
               <li><a href="community.html">community</a></li>
             </ul>
-            <div class="modal">
-              <form class="form">
-                <div class="payment-options">
-                  <button name="paypal" type="button"></button>
-                  <button name="apple-pay" type="button"></button>
-                  <button name="google-pay" type="button"></button>
-                  <div class="separator">
-                    <hr class="line">
-                    <p> or pay using your credit card </p>
-                    <hr class="line">
-                  </div>
-                  <div class="credit-card-info">
-                    <div class="info-container">
-                      <label for="password-field"
-                      class="input-label"> card holder full name </label>
-                      <input id="password-field"
-                      class="input-field" type="text" name="input-name"
-                      title="input title" placeholder="Enter your full name">
-                    </div>
-                    <div class="input-container">
-                      <label for="password-field"
-                      class="input-field" type="number" name="input-name" title="input title" placeholder="0000 0000 0000 0000"></label>
-                    </div>
-                    <div class="input-container">
-                      <label for="password-field"
-                      class="input-label">Expiry Date / CVV</label>
-                      <div class="split">
-                        <input id="password-field"
-                        class="input-field" type="text" name="input-name" title="expiry date" placeholder="01/23">
-                        <input id="password-field"
-                        class="input-field" type="number" name="cvv" title="CVV" placeholder="CVV">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="purchase-btn">Checkout</button>
-              </form>
-            </div>
         </nav>
-        <section></section>
     </body>
 </html>
